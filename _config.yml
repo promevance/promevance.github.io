@@ -21,12 +21,7 @@
 title: Evan Promise - Product | Data | Finance | Business
 email: promevance@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-Evan is a multifaceted Analyst and Project Manager with  5+ years of experience 
-applying data analytics, business analysis, and systems design to solve organisational challenges. 
-He is a polymath, skilled in product study and testing, requirements analysis, 
-BI tools (Python, SQL, Excel, DAX, R), project management frameworks, and product marketing. 
-He has a proven record of leading cross-functional teams, delivering scalable digital solutions, 
-and driving measurable impact across finance, healthcare, real estate, FMCG, and technology sectors. 
+Evan is a multifaceted Analyst and Project Manager with  5+ years of experience applying data analytics, business analysis, and systems design to solve organisational challenges. He is a polymath, skilled in product study and testing, requirements analysis, BI tools (Python, SQL, Excel, DAX, R), project management frameworks, and product marketing. He has a proven record of leading cross-functional teams, delivering scalable digital solutions, and driving measurable impact across finance, healthcare, real estate, FMCG, and technology sectors. 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: promevance

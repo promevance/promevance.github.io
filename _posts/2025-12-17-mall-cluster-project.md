@@ -124,6 +124,7 @@ This project produced the following outputs:
   🔗 View notebook and code snippets:
   [https://github.com/promevance/dclc-python/blob/my-assignment/mall-cluster-project/mall-cluster.ipynb](https://github.com/promevance/dclc-python/blob/my-assignment/mall-cluster-project/mall-cluster.ipynb)
 
+``` python
   # Calculating and plotting inertia for different values of k (multivariate clustering)
 inertia_values3 = []
 
@@ -138,8 +139,9 @@ plt.xlabel('Number of clusters (k)')
 plt.ylabel('Inertia')
 plt.savefig('elbow_multivariate.png')
 plt.show()
+```
 
-
+``` python
 # Plotting clusters with centroids
 plt.figure(figsize=(10,6))
 
@@ -166,7 +168,7 @@ plt.ylabel('Spending Score (1-100)')
 plt.legend()
 plt.savefig('clusters_with_centroids.png')
 plt.show()
-
+```
 
 ---
 

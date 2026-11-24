@@ -1,0 +1,12 @@
+{% macro card(p, links=true) %}
+<article class="card" data-tags="{{ p.tags | join('|') }}">
+  <div class="card-media{% if p.cover_fit == 'cover' %} cover{% endif %}"><img src="{{ p.thumb or p.cover }}" alt="{{ p.cover_alt }}" loading="lazy" width="640" height="400"></div>
+  <div class="card-body">
+    <div class="card-kicker">{{ p.category }} · {{ p.year }}</div>
+    <h3><a href="{{ p.url }}">{{ p.title }}</a></h3>
+    <p>{{ p.card_blurb }}</p>
+    <div class="chips">{% for t in p.tools %}<span class="chip">{{ t }}</span>{% endfor %}</div>
+    {% if links %}<div class="card-links"><a href="{{ p.url }}#at-a-glance">Summary</a><a href="{{ p.url }}#under-the-hood">Technical details</a></div>{% endif %}
+  </div>
+</article>
+{% endmacro %}

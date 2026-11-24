@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block main %}
+<section class="page-head">
+  <div class="container">
+    <div class="crumbs"><a href="/">Home</a><span>/</span>About</div>
+    <div class="eyebrow">About</div>
+    <h1>{{ site.full_name }}</h1>
+    <p>{{ site.tagline }}</p>
+  </div>
+</section>
+<section class="section">
+  <div class="container about-grid">
+    <article class="prose">
+{{ body_html | safe }}
+    </article>
+    <aside class="about-aside">
+      <div class="tile h"><h4>Sectors</h4><ul><li>Finance</li><li>Healthcare</li><li>Real estate</li><li>FMCG</li><li>Technology</li></ul></div>
+      <div class="tile h"><h4>Toolbox</h4><ul><li>Tableau and Tableau Prep</li><li>Python, SQL, R</li><li>Excel and DAX</li><li>Project management frameworks</li></ul></div>
+      <div class="tile h"><h4>Get in touch</h4><ul style="list-style:none;padding:0"><li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li><li><a href="{{ site.github }}" target="_blank" rel="noopener">github.com/promevance</a></li></ul></div>
+    </aside>
+  </div>
+</section>
+{% endblock %}

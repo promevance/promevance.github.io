@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mall Customer Segmentation · Evan Promise</title>
+  <meta name="description" content="K-Means clustering of mall customers by age, income and spending score, turned into targeted marketing recommendations.">
+  <link rel="canonical" href="https://promevance.github.io/projects/mall-customer-segmentation/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Evan Promise Chukwubueze">
+  <meta property="og:title" content="Mall Customer Segmentation · Evan Promise">
+  <meta property="og:description" content="K-Means clustering of mall customers by age, income and spending score, turned into targeted marketing recommendations.">
+  <meta property="og:url" content="https://promevance.github.io/projects/mall-customer-segmentation/">
+  <meta property="og:image" content="https://promevance.github.io/projects/mall-customer-segmentation/images/clusters_with_centroids.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0F2847">
+  <link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/brand/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap">
+  <script>try{var t=localStorage.getItem("ep-theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/" aria-label="Evan Promise, home">
+        <img class="logo-light" src="/assets/brand/logo-primary.svg" alt="Evan Promise" width="70" height="44">
+        <img class="logo-dark" src="/assets/brand/logo-reversed.svg" alt="" width="70" height="44">
+      </a>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <a href="/">Home</a>
+        <a href="/projects/" aria-current="page">Data Analytics</a>
+        <a href="/about/">About</a>
+      </nav>
+      <div class="header-actions">
+        <a class="icon-btn" href="https://github.com/promevance" aria-label="GitHub profile (opens in a new tab)" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.27 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg>
+        </a>
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Toggle light and dark theme">
+          <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+<section class="page-head">
+  <div class="container">
+    <div class="crumbs"><a href="/">Home</a><span>/</span><a href="/projects/">Data Analytics</a><span>/</span>Mall Customer Segmentation</div>
+    <div class="eyebrow">Machine learning · Customer analytics</div>
+    <h1>Mall Customer Segmentation</h1>
+    <p>K-Means clustering of 200 shoppers into five marketing segments, with a recommendation for each.</p>
+    <div class="proj-meta">
+      <div><b>Role</b>Individual project</div>
+      <div><b>Year</b>2025</div>
+      <div><b>Tools</b>Python, pandas, scikit-learn, seaborn, matplotlib, Jupyter</div>
+    </div>
+    <div class="proj-actions">
+      <a class="btn btn-gold" href="https://github.com/promevance/promevance.github.io/blob/main/projects/mall-customer-segmentation/mall-cluster.ipynb" target="_blank" rel="noopener">View the notebook</a>
+      <a class="btn btn-ghost" href="/projects/mall-customer-segmentation/mall_customers_clustered.csv">Download the clustered CSV</a>
+      <a class="btn btn-ghost" href="https://github.com/promevance/promevance.github.io/tree/main/projects/mall-customer-segmentation" target="_blank" rel="noopener">Project folder on GitHub</a>
+    </div>
+  </div>
+</section>
+<div class="kpi-strip">
+  <div class="container">
+    <div class="row">
+<div class="kpi"><b>200</b><span>mall customers in the source dataset</span></div>
+<div class="kpi"><b>3</b><span>behavioural features: age, income, spending score</span></div>
+<div class="kpi"><b>5</b><span>segments, chosen with the elbow method</span></div>
+<div class="kpi"><b>1</b><span>clustered dataset ready for the marketing team</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="container layout">
+  <aside class="toc" aria-label="On this page">
+    <h2>On this page</h2>
+    <ol data-toc></ol>
+  </aside>
+  <article class="prose">
+<h2 id="at-a-glance">At a glance</h2>
+<div class="callout navy">
+<h3 id="the-60-second-version">The 60-second version</h3>
+<ul>
+<li><strong>The question.</strong> Which customers are worth the most to the mall, and how should marketing spend be split between them?</li>
+<li><strong>What I did.</strong> Grouped 200 customers into five segments with K-Means clustering, using age, annual income and a 1–100 spending score.</li>
+<li><strong>What I found.</strong> One group stands out: high-income, high-spending customers (about 39 shoppers, mostly in their early 30s). Another group spends a lot on lower incomes. A third has high income but spends very little, which is untapped potential.</li>
+<li><strong>What I recommend.</strong> Put premium offers and loyalty programmes behind the prime group, run trend and value-for-money campaigns for the high spenders on lower incomes, and keep light-touch brand awareness for the rest.</li>
+</ul>
+</div>
+<h2 id="business-question">The business question</h2>
+<p>The mall's management team wanted to understand its customer base in order to:</p>
+<ul>
+<li>identify high-value customers;</li>
+<li>optimise marketing spend;</li>
+<li>design targeted campaigns for different customer segments; and</li>
+<li>let the marketing team drill down to individual customers.</li>
+</ul>
+<p>Rather than treating all customers the same, clustering lets the business make decisions based on how people actually spend.</p>
+<h2 id="findings">What I found</h2>
+<figure class="zoomable"><img src="/projects/mall-customer-segmentation/images/clusters_with_centroids.png" alt="Customers plotted by annual income and spending score, coloured by cluster, with centroids in black" loading="lazy"><figcaption>Five customer segments by annual income and spending score. Black dots are the cluster centres.</figcaption></figure>
+<table>
+<thead>
+<tr>
+<th>Segment</th>
+<th>Customers</th>
+<th>Avg. age</th>
+<th>Avg. income (k$)</th>
+<th>Avg. spending score</th>
+<th>How I read it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>39</td>
+<td>33</td>
+<td>87</td>
+<td>82</td>
+<td><strong>Prime customers.</strong> High income, high spending</td>
+</tr>
+<tr>
+<td>2</td>
+<td>22</td>
+<td>25</td>
+<td>26</td>
+<td>79</td>
+<td><strong>Enthusiastic spenders.</strong> Lower income, high spending</td>
+</tr>
+<tr>
+<td>0</td>
+<td>81</td>
+<td>43</td>
+<td>55</td>
+<td>50</td>
+<td><strong>Mainstream.</strong> Middle income, middle spending</td>
+</tr>
+<tr>
+<td>3</td>
+<td>35</td>
+<td>41</td>
+<td>88</td>
+<td>17</td>
+<td><strong>Untapped potential.</strong> High income, low spending</td>
+</tr>
+<tr>
+<td>4</td>
+<td>22</td>
+<td>46</td>
+<td>27</td>
+<td>20</td>
+<td><strong>Low priority.</strong> Lower income, low spending</td>
+</tr>
+</tbody>
+</table>
+<p class="sub" style="color:var(--muted);font-size:.86rem">Segment numbers are the cluster labels in the exported CSV; the descriptive names are mine. Averages are computed from that file.</p>
+<h3 id="recommendations-by-segment">Recommendations by segment</h3>
+<div class="cols-3">
+<div class="tile h"><h4>Prime customers</h4><p>The most valuable group. Prioritise premium offerings, loyalty programmes and exclusive promotions.</p></div>
+<div class="tile h"><h4>Enthusiastic spenders</h4><p>Selective but intentional. Highlight trending products, promotions and value-for-money offers.</p></div>
+<div class="tile h"><h4>Everyone else</h4><p>Less immediate revenue potential. Keep up brand awareness and social media marketing without heavy targeted spend. Test what would move the high-income, low-spending group.</p></div>
+</div>
+<h2 id="under-the-hood">Under the hood</h2>
+<h3 id="method">Method</h3>
+<ol>
+<li><strong>Explore and clean.</strong> Loaded and inspected the data, checked for missing values and consistency (univariate and bivariate analysis).</li>
+<li><strong>Select features.</strong> Age, annual income and spending score.</li>
+<li><strong>Choose the number of clusters.</strong> Used the <strong>elbow method</strong>: fit K-Means for k = 1 to 10 and plot the inertia (within-cluster sum of squares), then look for the bend.</li>
+<li><strong>Cluster.</strong> K-Means from scikit-learn with <code>random_state=42</code> for reproducibility. I clustered three ways: income vs spending, age vs spending, and all three features together.</li>
+<li><strong>Visualise.</strong> Plotted clusters with their centroids with seaborn and matplotlib.</li>
+</ol>
+<figure class="zoomable"><img src="/projects/mall-customer-segmentation/images/elbow_multivariate.png" alt="Elbow plot of inertia against number of clusters for the multivariate clustering" loading="lazy"><figcaption>Elbow plot for the multivariate clustering: inertia falls steeply until about four to six clusters, then flattens.</figcaption></figure>
+<pre><code class="language-python"># Inertia for different values of k (multivariate clustering)
+inertia_values3 = []
+
+for k in range(1, 11):
+    kmeans = KMeans(n_clusters=k, random_state=42)
+    kmeans.fit(df3)
+    inertia_values3.append(kmeans.inertia_)
+
+plt.plot(range(1, 11), inertia_values3, marker='o')
+plt.title('Elbow Method for Optimal k (Multivariate Clustering)')
+plt.xlabel('Number of clusters (k)')
+plt.ylabel('Inertia')
+plt.savefig('elbow_multivariate.png')
+plt.show()
+</code></pre>
+<pre><code class="language-python"># Plot clusters with centroids
+plt.figure(figsize=(10, 6))
+
+sns.scatterplot(data=centres, x='Annual Income (k$)', y='Spending Score (1-100)',
+                s=200, color='black', label='Centroids')
+
+sns.scatterplot(data=df2, x='Annual Income (k$)', y='Spending Score (1-100)',
+                hue='Cluster_Income_Spending', palette='Set1')
+
+plt.title('Clusters of Annual Income vs Spending Score with Centroids')
+plt.xlabel('Annual Income (k$)')
+plt.ylabel('Spending Score (1-100)')
+plt.legend()
+plt.savefig('clusters_with_centroids.png')
+plt.show()
+</code></pre>
+<h3 id="dataset">Dataset</h3>
+<p>The data has three behavioural variables: <strong>Age</strong>, <strong>Annual Income (k$)</strong> and <strong>Spending Score (1–100)</strong>, a metric representing customer spending behaviour at the mall. The exported file adds two columns, <code>Cluster_Income_Spending</code> and <code>Cluster_Age_Spending</code>, so the marketing team can filter to any segment.</p>
+<h2 id="limitations">Limitations and next steps</h2>
+<ul>
+<li><strong>Small dataset.</strong> Two hundred customers is enough to demonstrate the method but not to size a campaign.</li>
+<li><strong>The spending score is a given metric.</strong> I did not have the underlying transactions, so the segments describe behaviour as scored, not revenue.</li>
+<li><strong>Cluster labels are not business labels.</strong> The names above are my interpretation and should be validated with the marketing team.</li>
+<li><strong>Next:</strong> scale the features before multivariate clustering, compare with silhouette scores, and reconcile the 199 rows in the exported CSV with the 200 customers in the source dataset.</li>
+</ul>
+<h2 id="files">Files</h2>
+<div class="files">
+<a class="file" href="https://github.com/promevance/promevance.github.io/blob/main/projects/mall-customer-segmentation/mall-cluster.ipynb" target="_blank" rel="noopener"><span class="ext">IPYNB</span><span><b>mall-cluster.ipynb</b><span class="d">Full workflow: exploration, elbow method, clustering and charts.</span></span><span class="go">GitHub ↗</span></a>
+<a class="file" href="/projects/mall-customer-segmentation/mall_customers_clustered.csv"><span class="ext">CSV</span><span><b>mall_customers_clustered.csv</b><span class="d">Customer data with cluster labels added.</span></span><span class="go">Download</span></a>
+<a class="file" href="/projects/mall-customer-segmentation/images/clusters_with_centroids.png"><span class="ext">PNG</span><span><b>clusters_with_centroids.png</b><span class="d">Cluster visual with centroids.</span></span><span class="go">Open ↗</span></a>
+<a class="file" href="https://github.com/promevance/promevance.github.io/blob/main/projects/mall-customer-segmentation/README.md" target="_blank" rel="noopener"><span class="ext">MD</span><span><b>Project README</b><span class="d">Overview and repository map.</span></span><span class="go">GitHub ↗</span></a>
+</div>
+<h2 id="skills">Skills demonstrated</h2>
+<div class="chips">
+<span class="chip">Unsupervised learning</span><span class="chip">K-Means clustering</span><span class="chip">Elbow method</span><span class="chip">pandas</span><span class="chip">scikit-learn</span><span class="chip">seaborn and matplotlib</span><span class="chip">Customer segmentation</span><span class="chip">Turning models into marketing actions</span>
+</div>
+
+  </article>
+</div>
+
+<div class="container pager">
+<a class="prev" href="/projects/spotify-widening-the-spotlight/"><small>← Previous project</small><b>Widening the Spotlight</b></a><a class="next" href="/projects/uk-covid19-daily-cases/"><small>Next project →</small><b>UK COVID-19 Daily Cases</b></a></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>
+        <img class="glyph" src="/assets/brand/glyph-ivory.svg" alt="" width="45" height="40">
+        <p><strong style="color:var(--ivory)">Evan Promise Chukwubueze</strong><br>Product | Data | Finance | Business</p>
+        <p>Analyst and project manager. Turning data into decisions people can act on.</p>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/projects/">Data Analytics projects</a></li>
+          <li><a href="/about/">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Projects</h2>
+        <ul>
+<li><a href="/projects/spotify-widening-the-spotlight/">Widening the Spotlight</a></li>
+<li><a href="/projects/mall-customer-segmentation/">Mall Customer Segmentation</a></li>
+<li><a href="/projects/uk-covid19-daily-cases/">UK COVID-19 Daily Cases</a></li>
+        </ul>
+        <h2 style="margin-top:22px">Connect</h2>
+        <ul>
+          <li><a href="https://github.com/promevance" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="mailto:promevance@gmail.com">promevance@gmail.com</a></li>
+        </ul>
+      </div>
+      <div class="legal">
+        <span>© 2026 Evan Promise Chukwubueze. Source on <a href="https://github.com/promevance/promevance.github.io" target="_blank" rel="noopener">GitHub</a>.</span>
+        <span>Spotify is a trademark of Spotify AB. The Spotify project is an independent academic case study and is not affiliated with or endorsed by Spotify.</span>
+      </div>
+    </div>
+  </footer>
+  <script src="/assets/site.js" defer></script>
+</body>
+</html>

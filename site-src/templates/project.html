@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block main %}
+<section class="page-head">
+  <div class="container">
+    <div class="crumbs"><a href="/">Home</a><span>/</span><a href="/projects/">Data Analytics</a><span>/</span>{{ p.title }}</div>
+    <div class="eyebrow">{{ p.category }}</div>
+    <h1>{{ p.title }}</h1>
+    <p>{{ p.subtitle }}</p>
+    <div class="proj-meta">
+      <div><b>Role</b>{{ p.role }}</div>
+      <div><b>Year</b>{{ p.year }}</div>
+      <div><b>Tools</b>{{ p.tools | join(', ') }}</div>
+    </div>
+    <div class="proj-actions">
+      {% for a in p.actions %}
+      <a class="btn {{ 'btn-gold' if a.primary else 'btn-ghost' }}" href="{{ a.href }}"{% if a.href.startswith('http') %} target="_blank" rel="noopener"{% endif %}>{{ a.label }}</a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% if p.kpis %}
+<div class="kpi-strip">
+  <div class="container">
+    <div class="row">
+      {% for k in p.kpis %}<div class="kpi"><b>{{ k.value | safe }}</b><span>{{ k.label }}</span></div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endif %}
+
+<div class="container layout">
+  <aside class="toc" aria-label="On this page">
+    <h2>On this page</h2>
+    <ol data-toc></ol>
+  </aside>
+  <article class="prose">
+{{ p.body_html | safe }}
+  </article>
+</div>
+
+<div class="container pager">
+  {% if prev_p %}<a class="prev" href="{{ prev_p.url }}"><small>← Previous project</small><b>{{ prev_p.title }}</b></a>{% else %}<span></span>{% endif %}
+  {% if next_p %}<a class="next" href="{{ next_p.url }}"><small>Next project →</small><b>{{ next_p.title }}</b></a>{% else %}<a class="next" href="/projects/"><small>Back to</small><b>All projects</b></a>{% endif %}
+</div>
+{% endblock %}

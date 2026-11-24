@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+{% from "_macros.html" import card %}
+{% block main %}
+{% set f = projects[0] %}
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Product · Data · Finance · Business</div>
+        <h1>I turn data into <em>decisions</em> people can act on.</h1>
+        <p class="lead">I'm Evan, an analyst and project manager with 5+ years across finance, healthcare, real estate, FMCG and technology. This portfolio shows how I take a business question from raw data to a clear recommendation, in Tableau and Python.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="/projects/">Explore the projects
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-ghost" href="{{ f.url }}">Read the Spotify case study</a>
+        </div>
+      </div>
+      <div class="hero-stats" aria-label="At a glance">
+        <div class="stat"><b>5+</b><span>years applying analytics, business analysis and project delivery</span></div>
+        <div class="stat"><b>3</b><span>end-to-end case studies, each with data, code and documentation</span></div>
+        <div class="stat"><b>8,577</b><span>Spotify tracks analysed to build a 10-year strategy</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="featured">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Featured project</div>
+      <h2>{{ f.title }}: a data-backed strategy for Spotify</h2>
+    </div>
+    <article class="feature">
+      <div class="feature-media"><a href="{{ f.url }}" aria-label="Open the {{ f.title }} case study"><img src="{{ f.cover }}" alt="{{ f.cover_alt }}" width="953" height="642"></a></div>
+      <div class="feature-body">
+        <div class="card-kicker">{{ f.category }} · {{ f.year }}</div>
+        <h3>{{ f.subtitle }}</h3>
+        <p>{{ f.card_blurb }}</p>
+        <div class="mini-kpis">
+          {% for k in f.kpis[:3] %}<div><b>{{ k.value | safe }}</b><span>{{ k.label }}</span></div>
+          {% endfor %}
+        </div>
+        <div class="chips">{% for t in f.tools %}<span class="chip">{{ t }}</span>{% endfor %}</div>
+        <div class="cta">
+          <a class="btn btn-primary" href="{{ f.url }}">Read the case study</a>
+          <a class="btn btn-ghost" href="{{ f.dashboard_url }}" target="_blank" rel="noopener">Open the live dashboard</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section soft">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Data Analytics</div>
+      <h2>All projects</h2>
+      <p>Each project opens with a two-minute summary for non-technical readers, followed by a technical deep dive and every file behind it.</p>
+    </div>
+    <div class="grid">
+      {% for p in projects %}{{ card(p) }}{% endfor %}
+    </div>
+    <p style="margin-top:28px"><a class="btn btn-primary" href="/projects/">Browse and filter all projects</a></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">How I work</div>
+      <h2>From a vague question to a recommendation someone can use</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Frame the question</h3><p>Start with the decision the business has to make, and agree the measure of success before touching any data.</p></div>
+      <div class="step"><h3>Prepare and analyse</h3><p>Clean and document the data, test the patterns, and check every headline number a second way.</p></div>
+      <div class="step"><h3>Communicate and recommend</h3><p>Turn the findings into a clear story, a dashboard or deck, and a plan with KPIs to track.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section soft">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Where to start</div>
+      <h2>Pick the depth that suits you</h2>
+    </div>
+    <div class="paths">
+      <div class="path">
+        <h3>In a hurry, or not technical?</h3>
+        <p>Every project starts with an "At a glance" box: the question, the answer and the recommendation in about a minute.</p>
+        <ul>
+          {% for p in projects %}<li><a href="{{ p.url }}#at-a-glance">{{ p.title }}: summary →</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="path dark">
+        <h3>Want to see how it was built?</h3>
+        <p>Method, definitions, code, notebooks, data and Tableau files are all in the open, with documentation to match.</p>
+        <ul>
+          {% for p in projects %}<li><a href="{{ p.url }}#under-the-hood">{{ p.title }}: technical details →</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Toolbox</div>
+      <h2>What I work with</h2>
+    </div>
+    <div class="toolbox">
+      <span class="tool lead">Tableau</span><span class="tool lead">Tableau Prep</span><span class="tool lead">Python</span>
+      <span class="tool">pandas</span><span class="tool">scikit-learn</span><span class="tool">matplotlib</span><span class="tool">seaborn</span><span class="tool">Jupyter</span>
+      <span class="tool">SQL</span><span class="tool">Excel</span><span class="tool">DAX</span><span class="tool">R</span>
+      <span class="tool">Requirements analysis</span><span class="tool">Project management</span><span class="tool">Data storytelling</span>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="container">
+    <div>
+      <h2>Let's talk about your data challenges.</h2>
+      <p>Open to conversations about analytics, product and business strategy roles.</p>
+    </div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <a class="btn btn-gold" href="mailto:{{ site.email }}">Email me</a>
+      <a class="btn btn-ghost" href="{{ site.github }}" target="_blank" rel="noopener" style="color:var(--ivory);border-color:rgba(250,248,244,.4)">GitHub</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

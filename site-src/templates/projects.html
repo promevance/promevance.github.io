@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% from "_macros.html" import card %}
+{% block main %}
+<section class="page-head">
+  <div class="container">
+    <div class="crumbs"><a href="/">Home</a><span>/</span>Data Analytics</div>
+    <div class="eyebrow">Data Analytics</div>
+    <h1>Projects</h1>
+    <p>Business questions answered with data. Each case study has a plain-language summary, a technical deep dive, and the files behind it.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="filters" data-filters role="group" aria-label="Filter projects">
+      <button class="filter" type="button" data-filter="all" aria-pressed="true">All</button>
+      {% for t in tags %}<button class="filter" type="button" data-filter="{{ t }}" aria-pressed="false">{{ t }}</button>
+      {% endfor %}
+      <span class="count" data-count aria-live="polite">{{ projects | length }} projects</span>
+    </div>
+    <div class="grid">
+      {% for p in projects %}{{ card(p) }}{% endfor %}
+    </div>
+  </div>
+</section>
+<section class="section soft">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Code and data</div>
+      <h2>Everything is in the repository</h2>
+      <p>Each project has its own folder with a README, notebooks or Tableau files, the datasets and supporting documentation.</p>
+    </div>
+    <p><a class="btn btn-primary" href="{{ gh_tree }}projects" target="_blank" rel="noopener">Browse the projects folder on GitHub</a></p>
+  </div>
+</section>
+{% endblock %}

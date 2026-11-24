@@ -2,14 +2,17 @@
   <a href="https://promevance.github.io"><img src="assets/brand/logo-primary.svg" alt="Evan Promise" width="220"></a>
 </p>
 
-<h3 align="center">Data Analytics Portfolio · Product | Data | Finance | Business</h3>
+<h3 align="center">Data &amp; Technical Portfolio · Brand &amp; Growth · GTM Engineering · Data</h3>
 
 <p align="center">
   <a href="https://promevance.github.io"><img alt="Visit the portfolio" src="https://img.shields.io/badge/Visit-the%20portfolio-0F2847?style=for-the-badge"></a>
   <a href="https://promevance.github.io/projects/"><img alt="Browse the projects" src="https://img.shields.io/badge/Browse-the%20projects-C9993A?style=for-the-badge"></a>
+  <a href="https://evanpromise.com"><img alt="Main site: evanpromise.com" src="https://img.shields.io/badge/Main%20site-evanpromise.com-1B3F6B?style=for-the-badge"></a>
 </p>
 
-Hi, I'm **Evan Promise Chukwubueze**, an analyst and project manager with 5+ years of experience across finance, healthcare, real estate, FMCG and technology. This repository is the source of my portfolio site, **<https://promevance.github.io>**, and holds the data, code and documentation behind every project.
+Hi, I'm **Evan Promise Chukwubueze**, a brand and growth specialist, GTM engineer and budding data engineer. I've spent 8+ years growing startups and ventures across Africa and Europe, and I'm now building out the data side of that work, across BI, data analysis and data science.
+
+This repository is the source of my data and technical portfolio, **<https://promevance.github.io>**, and holds the data, code and documentation behind every project. My brand and growth case studies live on my main site, **[evanpromise.com](https://evanpromise.com)**.
 
 ## Projects
 
@@ -59,7 +62,9 @@ The visual identity follows the Evan Promise brand kit: deep navy `#0F2847`, blu
 
 ## Contact
 
-Email: [promevance@gmail.com](mailto:promevance@gmail.com) · GitHub: [@promevance](https://github.com/promevance)
+- Website: [evanpromise.com](https://evanpromise.com)
+- Email: [hello@evanpromise.com](mailto:hello@evanpromise.com) · [promevance@gmail.com](mailto:promevance@gmail.com)
+- LinkedIn: [evan-promise-c](https://www.linkedin.com/in/evan-promise-c/) · GitHub: [@promevance](https://github.com/promevance)
 
 ---
 

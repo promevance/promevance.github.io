@@ -280,6 +280,11 @@ p { margin: 0 0 1em; }
 .tool.lead { background: var(--deep); color: var(--ivory); border-color: var(--deep); }
 :root[data-theme="dark"] .tool.lead { background: var(--gold-lt); color: var(--deep); border-color: var(--gold-lt); }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .tool.lead { background: var(--gold-lt); color: var(--deep); border-color: var(--gold-lt); } }
+.path .toolbox { margin-top: 16px; gap: 8px; }
+.path.dark .tool, :root[data-theme] .path.dark .tool { background: rgba(250, 248, 244, .08); color: var(--ivory); border-color: rgba(250, 248, 244, .22); }
+.path.dark .tool.lead, :root[data-theme] .path.dark .tool.lead { background: var(--gold-lt); color: var(--deep); border-color: var(--gold-lt); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .path.dark .tool { background: rgba(250, 248, 244, .08); color: var(--ivory); border-color: rgba(250, 248, 244, .22); } :root:not([data-theme="light"]) .path.dark .tool.lead { background: var(--gold-lt); color: var(--deep); border-color: var(--gold-lt); } }
+.path.dark .eyebrow { color: var(--gold-lt); }
 
 /* ---------- CTA band ---------- */
 .band { background: var(--deep); color: var(--ivory); position: relative; overflow: hidden; }

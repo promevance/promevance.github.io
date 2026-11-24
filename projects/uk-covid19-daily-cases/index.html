@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UK COVID-19 Daily Cases · Evan Promise</title>
+  <meta name="description" content="An interactive Python line chart of UK daily COVID-19 cases, using pandas, Matplotlib and mplcursors.">
+  <link rel="canonical" href="https://promevance.github.io/projects/uk-covid19-daily-cases/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Evan Promise Chukwubueze">
+  <meta property="og:title" content="UK COVID-19 Daily Cases · Evan Promise">
+  <meta property="og:description" content="An interactive Python line chart of UK daily COVID-19 cases, using pandas, Matplotlib and mplcursors.">
+  <meta property="og:url" content="https://promevance.github.io/projects/uk-covid19-daily-cases/">
+  <meta property="og:image" content="https://promevance.github.io/projects/uk-covid19-daily-cases/images/uk-covid-daily-cases.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0F2847">
+  <link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/brand/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap">
+  <script>try{var t=localStorage.getItem("ep-theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/" aria-label="Evan Promise, home">
+        <img class="logo-light" src="/assets/brand/logo-primary.svg" alt="Evan Promise" width="70" height="44">
+        <img class="logo-dark" src="/assets/brand/logo-reversed.svg" alt="" width="70" height="44">
+      </a>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <a href="/">Home</a>
+        <a href="/projects/" aria-current="page">Data Analytics</a>
+        <a href="/about/">About</a>
+      </nav>
+      <div class="header-actions">
+        <a class="icon-btn" href="https://github.com/promevance" aria-label="GitHub profile (opens in a new tab)" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.27 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg>
+        </a>
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Toggle light and dark theme">
+          <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+<section class="page-head">
+  <div class="container">
+    <div class="crumbs"><a href="/">Home</a><span>/</span><a href="/projects/">Data Analytics</a><span>/</span>UK COVID-19 Daily Cases</div>
+    <div class="eyebrow">Data visualization · Python</div>
+    <h1>UK COVID-19 Daily Cases</h1>
+    <p>An interactive Python line chart of UK daily COVID-19 cases, built with pandas, Matplotlib and mplcursors.</p>
+    <div class="proj-meta">
+      <div><b>Role</b>Individual project</div>
+      <div><b>Year</b>2025</div>
+      <div><b>Tools</b>Python, pandas, Matplotlib, mplcursors, VS Code</div>
+    </div>
+    <div class="proj-actions">
+      <a class="btn btn-gold" href="https://github.com/promevance/promevance.github.io/blob/main/projects/uk-covid19-daily-cases/README.md" target="_blank" rel="noopener">Read the report on GitHub</a>
+      <a class="btn btn-ghost" href="https://github.com/promevance/promevance.github.io/tree/main/projects/uk-covid19-daily-cases" target="_blank" rel="noopener">Project folder on GitHub</a>
+    </div>
+  </div>
+</section>
+
+<div class="container layout">
+  <aside class="toc" aria-label="On this page">
+    <h2>On this page</h2>
+    <ol data-toc></ol>
+  </aside>
+  <article class="prose">
+<h2 id="at-a-glance">At a glance</h2>
+<div class="callout navy">
+<h3 id="the-60-second-version">The 60-second version</h3>
+<ul>
+<li><strong>The question.</strong> How did daily COVID-19 cases in the UK change over time, and can a reader explore the exact numbers?</li>
+<li><strong>What I did.</strong> Loaded the UK data into pandas, sorted it by date and plotted daily cases as a wide line chart, with interactive tooltips so a reader can hover over any point and see the date and case count.</li>
+<li><strong>Why it matters.</strong> This was my first complete Python visualisation workflow: set up the environment, prepare the data, plot, and document the result. The same habits carry into the larger projects on this site.</li>
+</ul>
+</div>
+<h2 id="result">The result</h2>
+<figure class="zoomable"><img src="/projects/uk-covid19-daily-cases/images/uk-covid-daily-cases.png" alt="Line chart of UK daily COVID-19 cases over time" loading="lazy"><figcaption>UK daily COVID-19 cases over time. In the live notebook the chart is interactive: hovering shows the exact date and number of cases.</figcaption></figure>
+<p>The resulting plot gives a visual representation of how case numbers fluctuated over time, and the hover interaction makes it easy to explore specific days.</p>
+<h2 id="under-the-hood">Under the hood</h2>
+<h3 id="environment">Environment</h3>
+<p>I wanted to work in VS Code, having previously used Jupyter Notebook in the browser through Anaconda. So I created the notebook in VS Code, linked it to the right Python kernel, and installed the libraries the notebook imports.</p>
+<h3 id="data-preparation">Data preparation</h3>
+<p>I downloaded the dataset and loaded it into a pandas DataFrame, which I sorted by date. I then extracted two arrays, <code>x</code> for dates and <code>y</code> for daily case numbers, to make plotting simple.</p>
+<h3 id="plotting">Plotting</h3>
+<p>I used Matplotlib to draw the line plot, with these key features:</p>
+<ul>
+<li><code>figure.figsize = (16, 6)</code> for a wide layout that suits a long time series;</li>
+<li>labels for the x-axis (Date), y-axis (Number of Daily Cases) and the title; and</li>
+<li><code>mplcursors</code> to enable hover tooltips showing the exact date and value.</li>
+</ul>
+<pre><code class="language-python">%matplotlib inline
+import matplotlib.pyplot as mplt
+import mplcursors
+
+mplt.plot(x, y)
+mplt.xlabel('Date')
+mplt.ylabel('Number of Daily Cases')
+mplt.title('UK Daily COVID-19 Cases Over Time')
+
+mplt.rcParams[&quot;figure.figsize&quot;] = (16, 6)
+
+cursor = mplcursors.cursor(hover=True)
+
+mplt.show()
+</code></pre>
+<h2 id="limitations">What I would improve next</h2>
+<ul>
+<li><strong>Parse dates explicitly.</strong> Convert the date column with <code>pd.to_datetime</code> so the x-axis shows real calendar dates. In the exported image the date labels look like epoch-style values, a classic sign that the dates were plotted as numbers.</li>
+<li><strong>Show a rolling average.</strong> Daily counts are noisy; a seven-day average would make the trend easier to read.</li>
+<li><strong>Add the data source and date range</strong> to the chart caption so it is fully traceable.</li>
+</ul>
+<h2 id="files">Files</h2>
+<div class="files">
+<a class="file" href="https://github.com/promevance/promevance.github.io/blob/main/projects/uk-covid19-daily-cases/README.md" target="_blank" rel="noopener"><span class="ext">MD</span><span><b>Project report</b><span class="d">The written report: environment, data preparation, plotting and code.</span></span><span class="go">GitHub ↗</span></a>
+<a class="file" href="/projects/uk-covid19-daily-cases/images/uk-covid-daily-cases.png"><span class="ext">PNG</span><span><b>uk-covid-daily-cases.png</b><span class="d">The chart as an image.</span></span><span class="go">Open ↗</span></a>
+</div>
+<h2 id="skills">Skills demonstrated</h2>
+<div class="chips">
+<span class="chip">pandas</span><span class="chip">Matplotlib</span><span class="chip">Interactive charts (mplcursors)</span><span class="chip">VS Code and Jupyter</span><span class="chip">Technical writing</span>
+</div>
+
+  </article>
+</div>
+
+<div class="container pager">
+<a class="prev" href="/projects/mall-customer-segmentation/"><small>← Previous project</small><b>Mall Customer Segmentation</b></a><a class="next" href="/projects/"><small>Back to</small><b>All projects</b></a></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>
+        <img class="glyph" src="/assets/brand/glyph-ivory.svg" alt="" width="45" height="40">
+        <p><strong style="color:var(--ivory)">Evan Promise Chukwubueze</strong><br>Product | Data | Finance | Business</p>
+        <p>Analyst and project manager. Turning data into decisions people can act on.</p>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/projects/">Data Analytics projects</a></li>
+          <li><a href="/about/">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Projects</h2>
+        <ul>
+<li><a href="/projects/spotify-widening-the-spotlight/">Widening the Spotlight</a></li>
+<li><a href="/projects/mall-customer-segmentation/">Mall Customer Segmentation</a></li>
+<li><a href="/projects/uk-covid19-daily-cases/">UK COVID-19 Daily Cases</a></li>
+        </ul>
+        <h2 style="margin-top:22px">Connect</h2>
+        <ul>
+          <li><a href="https://github.com/promevance" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="mailto:promevance@gmail.com">promevance@gmail.com</a></li>
+        </ul>
+      </div>
+      <div class="legal">
+        <span>© 2026 Evan Promise Chukwubueze. Source on <a href="https://github.com/promevance/promevance.github.io" target="_blank" rel="noopener">GitHub</a>.</span>
+        <span>Spotify is a trademark of Spotify AB. The Spotify project is an independent academic case study and is not affiliated with or endorsed by Spotify.</span>
+      </div>
+    </div>
+  </footer>
+  <script src="/assets/site.js" defer></script>
+</body>
+</html>

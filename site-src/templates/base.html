@@ -35,6 +35,7 @@
         <a href="/"{% if nav == 'home' %} aria-current="page"{% endif %}>Home</a>
         <a href="/projects/"{% if nav == 'projects' %} aria-current="page"{% endif %}>Data Analytics</a>
         <a href="/about/"{% if nav == 'about' %} aria-current="page"{% endif %}>About</a>
+        <a href="{{ site.website }}" target="_blank" rel="noopener">Main site <span aria-hidden="true">↗</span><span class="sr-only"> (opens {{ site.website_label }} in a new tab)</span></a>
       </nav>
       <div class="header-actions">
         <a class="icon-btn" href="{{ site.github }}" aria-label="GitHub profile (opens in a new tab)" target="_blank" rel="noopener">
@@ -60,7 +61,7 @@
       <div>
         <img class="glyph" src="/assets/brand/glyph-ivory.svg" alt="" width="45" height="40">
         <p><strong style="color:var(--ivory)">{{ site.full_name }}</strong><br>{{ site.tagline }}</p>
-        <p>Analyst and project manager. Turning data into decisions people can act on.</p>
+        <p>{{ site.role }}. Lagos and Madrid.</p>
       </div>
       <div>
         <h2>Explore</h2>
@@ -78,8 +79,11 @@
         </ul>
         <h2 style="margin-top:22px">Connect</h2>
         <ul>
+          <li><a href="{{ site.website }}" target="_blank" rel="noopener">{{ site.website_label }}</a></li>
+          <li><a href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a></li>
           <li><a href="{{ site.github }}" target="_blank" rel="noopener">GitHub</a></li>
           <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          <li><a href="mailto:{{ site.email_alt }}">{{ site.email_alt }}</a></li>
         </ul>
       </div>
       <div class="legal">

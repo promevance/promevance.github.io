@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Widening the Spotlight · Evan Promise</title>
+  <meta name="description" content="A five-page Tableau story and 3, 5 and 10-year strategy for Spotify. 8% of artists earn 58% of hits, while Latin and K-pop grew from 0.6% to 14% of new hits.">
+  <link rel="canonical" href="https://promevance.github.io/projects/spotify-widening-the-spotlight/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Evan Promise Chukwubueze">
+  <meta property="og:title" content="Widening the Spotlight · Evan Promise">
+  <meta property="og:description" content="A five-page Tableau story and 3, 5 and 10-year strategy for Spotify. 8% of artists earn 58% of hits, while Latin and K-pop grew from 0.6% to 14% of new hits.">
+  <meta property="og:url" content="https://promevance.github.io/projects/spotify-widening-the-spotlight/">
+  <meta property="og:image" content="https://promevance.github.io/projects/spotify-widening-the-spotlight/images/dashboard-3-spotlight-today.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0F2847">
+  <link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/brand/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap">
+  <script>try{var t=localStorage.getItem("ep-theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/" aria-label="Evan Promise, home">
+        <img class="logo-light" src="/assets/brand/logo-primary.svg" alt="Evan Promise" width="70" height="44">
+        <img class="logo-dark" src="/assets/brand/logo-reversed.svg" alt="" width="70" height="44">
+      </a>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <a href="/">Home</a>
+        <a href="/projects/" aria-current="page">Data Analytics</a>
+        <a href="/about/">About</a>
+      </nav>
+      <div class="header-actions">
+        <a class="icon-btn" href="https://github.com/promevance" aria-label="GitHub profile (opens in a new tab)" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.27 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg>
+        </a>
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Toggle light and dark theme">
+          <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+<section class="page-head">
+  <div class="container">
+    <div class="crumbs"><a href="/">Home</a><span>/</span><a href="/projects/">Data Analytics</a><span>/</span>Widening the Spotlight</div>
+    <div class="eyebrow">Business strategy · Data visualization</div>
+    <h1>Widening the Spotlight</h1>
+    <p>A Tableau story and 10-year growth strategy for Spotify, built from 8,577 tracks and 2,545 artists.</p>
+    <div class="proj-meta">
+      <div><b>Role</b>Individual project (MBDS, Data Visualization)</div>
+      <div><b>Year</b>2026</div>
+      <div><b>Tools</b>Tableau, Tableau Prep Builder, Strategy, Python (verification)</div>
+    </div>
+    <div class="proj-actions">
+      <a class="btn btn-gold" href="https://public.tableau.com/app/profile/promise.chukwubueze/viz/SpotifyViz_17933813934110/Introduction" target="_blank" rel="noopener">Open the live dashboard</a>
+      <a class="btn btn-ghost" href="/projects/spotify-widening-the-spotlight/deck/Widening_the_Spotlight_Strategic_Roadmap.pdf">Read the strategy deck (PDF)</a>
+      <a class="btn btn-ghost" href="https://github.com/promevance/promevance.github.io/tree/main/projects/spotify-widening-the-spotlight" target="_blank" rel="noopener">Code, data and docs on GitHub</a>
+    </div>
+  </div>
+</section>
+<div class="kpi-strip">
+  <div class="container">
+    <div class="row">
+<div class="kpi"><b>58%</b><span>of all hits come from 202 superstar artists, just 8% of artists</span></div>
+<div class="kpi"><b>0.6%<i> → </i>14%</b><span>Latin and K-pop share of new hits, 2010–15 vs 2021–25</span></div>
+<div class="kpi"><b>54%<i> · </i>46%</b><span>hit rate of Latin · K-pop tracks, against 28% for all tracks</span></div>
+<div class="kpi"><b>1%</b><span>hit rate of emerging artists (fewer than 100K followers)</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="container layout">
+  <aside class="toc" aria-label="On this page">
+    <h2>On this page</h2>
+    <ol data-toc></ol>
+  </aside>
+  <article class="prose">
+<h2 id="at-a-glance">At a glance</h2>
+<div class="callout navy">
+<h3 id="the-60-second-version">The 60-second version</h3>
+<ul>
+<li><strong>The question.</strong> Spotify decides which songs get heard. Where should it point that attention to keep growing over the next 3, 5 and 10 years?</li>
+<li><strong>What the data shows.</strong> Success is concentrated: 202 superstar artists (8% of all artists) produce 58% of the hits, and emerging artists turn only 1% of their tracks into hits. At the same time listeners are widening their taste. Latin and K-pop went from 0.6% to 14% of new hits, and their tracks are almost twice as likely to be hits as the average track.</li>
+<li><strong>What I recommend.</strong> "Widen the spotlight": keep the superstars central, but give the fastest-growing tastes the same discovery push, grow a deeper pipeline of artists inside them, and turn the approach into a repeatable habit.</li>
+</ul>
+</div>
+<div class="cols-3">
+<div class="tile h"><h4>Years 1–3 · Test and learn</h4><p>A/B-test Latin and K-pop recommendations with listeners of nearby tastes. Deepen editorial playlists.</p></div>
+<div class="tile h"><h4>Years 3–5 · Grow the pipeline</h4><p>Bring emerging Latin and K-pop artists into artist programmes, with audience data and marketing tools.</p></div>
+<div class="tile h"><h4>Years 5–10 · Repeat the playbook</h4><p>Review the genre opportunity matrix every quarter to spot the next rising taste early.</p></div>
+</div>
+<div class="callout soft">
+<h3 id="who-this-is-for">Who this is for</h3>
+<p><strong>Hiring managers and non-technical readers:</strong> this section, the findings and the recommendations tell the whole story. <strong>Analysts and data leads:</strong> jump to <a href="#under-the-hood">Under the hood</a> for the data preparation, definitions, validation and files.</p>
+</div>
+<h2 id="business-question">The business question</h2>
+<p>The assignment brief asked for a strategic roadmap that would:</p>
+<ul>
+<li>give an overview of Spotify's catalogue, its largest players and the trends shaping it;</li>
+<li>showcase performance KPIs (popularity and hit rate stand in for financials, which the dataset does not contain);</li>
+<li>analyse how artists and genres compete for listeners' attention;</li>
+<li>take a deep dive into one component, <strong>Spotify's fastest-growing listener tastes</strong>; and</li>
+<li>recommend a business development and strategy roadmap for the next 3, 5 and 10 years.</li>
+</ul>
+<p>I framed the answer around one idea: on Spotify, the <strong>spotlight</strong> is the attention that recommendations, playlists and home-screen placement give to a song. Today it falls mostly on a few superstars. The data shows listeners already reaching beyond them, so the opportunity is not to move the spotlight away from the stars but to <strong>widen</strong> it.</p>
+<h2 id="dashboard">The dashboard</h2>
+<p>The analysis is a five-page Tableau story that walks the reader from the big picture to the recommendation. Click any page to enlarge it, or <a href="https://public.tableau.com/app/profile/promise.chukwubueze/viz/SpotifyViz_17933813934110/Introduction" target="_blank" rel="noopener">open the interactive version on Tableau Public</a>.</p>
+<div class="gallery">
+<figure class="zoomable"><img src="/projects/spotify-widening-the-spotlight/images/dashboard-1-introduction.png" alt="Dashboard page 1: Introduction" loading="lazy"><figcaption><strong>1 · Introduction.</strong> The question and the answer up front.</figcaption></figure>
+<figure class="zoomable"><img src="/projects/spotify-widening-the-spotlight/images/dashboard-2-trends.png" alt="Dashboard page 2: Overview and trends" loading="lazy"><figcaption><strong>2 · Trends.</strong> Catalogue KPIs and how releases have changed.</figcaption></figure>
+<figure class="zoomable"><img src="/projects/spotify-widening-the-spotlight/images/dashboard-3-spotlight-today.png" alt="Dashboard page 3: The spotlight today" loading="lazy"><figcaption><strong>3 · The spotlight today.</strong> Who earns the hits, and who does not.</figcaption></figure>
+<figure class="zoomable"><img src="/projects/spotify-widening-the-spotlight/images/dashboard-4-growing-tastes.png" alt="Dashboard page 4: Growing tastes" loading="lazy"><figcaption><strong>4 · Growing tastes.</strong> Latin and K-pop rise; hit rate by genre.</figcaption></figure>
+</div>
+<figure class="zoomable"><img src="/projects/spotify-widening-the-spotlight/images/dashboard-5-opportunities.png" alt="Dashboard page 5: Opportunities roadmap" loading="lazy"><figcaption><strong>5 · Opportunities.</strong> The three-horizon roadmap with the KPI to watch in each.</figcaption></figure>
+<h2 id="findings">What the data says</h2>
+<h3 id="1-the-catalogue-is-recent-and-releases-are-getting-shorter-and-more-frequent">1. The catalogue is recent, and releases are getting shorter and more frequent</h3>
+<p>Sixty percent of the 8,577 tracks were released after 2015, and 765 are from 2025. <strong>Singles went from 7% of releases in 2010 to 58% in 2025</strong>, and the average song got about 50 seconds shorter (3.9 to 3.1 minutes). In a singles-led world listeners rely on playlists and recommendations to find new music, so the discovery engine Spotify controls now does much of the work that albums and radio once did.</p>
+<h3 id="2-the-spotlight-is-narrow">2. The spotlight is narrow</h3>
+<div class="chart">
+<h4>Superstars hold 8% of artists but earn 58% of hits</h4>
+<p class="sub">Share of artists, tracks and hits by artist tier (tier set by Spotify followers; hit = popularity of 70 or more)</p>
+<div class="bars">
+<div class="bar hi"><span class="l">Superstar (10M+)</span><span class="t"><i style="width:57.6%"></i></span><span class="v">58%</span></div>
+<div class="bar"><span class="l">Established (1–10M)</span><span class="t"><i style="width:34.6%"></i></span><span class="v">35%</span></div>
+<div class="bar"><span class="l">Developing (100K–1M)</span><span class="t"><i style="width:7.3%"></i></span><span class="v">7%</span></div>
+<div class="bar"><span class="l">Emerging (&lt;100K)</span><span class="t"><i style="width:0.5%"></i></span><span class="v">0.5%</span></div>
+</div>
+<p class="sub" style="margin:14px 0 0">Bars show each tier's share of all hits. Superstars are 8% of artists and 42% of tracks. Emerging artists are 34% of artists but turn only 1% of their tracks into hits.</p>
+</div>
+<p>Followers do not guarantee hits. Taylor Swift has the most followers (146M) and the most tracks (324) in the data, yet converts 32% of them into hits. <strong>Bad Bunny converts 86%</strong> and Billie Eilish 75%. BTS, the only K-pop act among the ten largest artists, has the lowest hit rate of the group (10%), a sign that K-pop's strength now lies in a broader set of artists.</p>
+<p>This is a business risk as well as a data point: when a handful of stars supply most of the hits, the labels behind them hold strong bargaining power, and rival services stream the same stars.</p>
+<h3 id="3-listener-tastes-are-widening-with-or-without-spotifys-help">3. Listener tastes are widening, with or without Spotify's help</h3>
+<div class="chart">
+<h4>Latin and K-pop went from under 1% to 14% of new hits</h4>
+<p class="sub">Share of hit tracks by release period (2010–15: 487 hits · 2016–20: 624 · 2021–25: 774)</p>
+<div class="stack">
+<div class="srow"><span class="l">2010–15</span><span class="t"><i class="a" style="width:0.6%"></i><i class="b" style="width:62.4%"></i><i class="c" style="width:37%"></i></span></div>
+<div class="srow-nums">Latin and K-pop 0.6% · other superstars 62.4% · all other artists 37.0%</div>
+<div class="srow"><span class="l">2016–20</span><span class="t"><i class="a" style="width:3.2%"></i><i class="b" style="width:65.9%"></i><i class="c" style="width:30.9%"></i></span></div>
+<div class="srow-nums">Latin and K-pop 3.2% · other superstars 65.9% · all other artists 30.9%</div>
+<div class="srow"><span class="l">2021–25</span><span class="t"><i class="a" style="width:13.6%"></i><i class="b" style="width:45.5%"></i><i class="c" style="width:41%"></i></span></div>
+<div class="srow-nums">Latin and K-pop 13.6% · other superstars 45.5% · all other artists 41.0%</div>
+</div>
+<div class="legend"><span style="--c:var(--gold)">Latin and K-pop</span><span style="--c:var(--blue)">Other superstars (10M+ followers)</span><span style="--c:#A9B7CC">All other artists</span></div>
+</div>
+<p>The number of Latin and K-pop artists with a hit grew from <strong>3 to 33</strong> between 2010–15 and 2021–25, while the superstar share of new hits fell from 69% (2016–20) to 56% (2021–25). Industry data points the same way: Latin America was the world's fastest-growing recorded-music region in 2025 (+17.1%, IFPI), and Bad Bunny was Spotify's most-streamed artist of 2025.</p>
+<h3 id="4-latin-and-k-pop-tracks-are-almost-twice-as-likely-to-be-hits">4. Latin and K-pop tracks are almost twice as likely to be hits</h3>
+<div class="chart">
+<h4>Hit rate by genre family</h4>
+<p class="sub">Share of tracks with a popularity score of 70 or more. 39% of tracks have no genre in the source data and are left out.</p>
+<div class="bars">
+<div class="bar hi"><span class="l">Latin</span><span class="t"><i style="width:54%"></i></span><span class="v">54%</span></div>
+<div class="bar hi"><span class="l">K-pop</span><span class="t"><i style="width:46%"></i></span><span class="v">46%</span></div>
+<div class="bar"><span class="l">Pop</span><span class="t"><i style="width:34%"></i></span><span class="v">34%</span></div>
+<div class="bar"><span class="l">Hip-Hop &amp; Rap</span><span class="t"><i style="width:34%"></i></span><span class="v">34%</span></div>
+<div class="bar"><span class="l">Rock &amp; Metal</span><span class="t"><i style="width:34%"></i></span><span class="v">34%</span></div>
+<div class="bar"><span class="l">R&amp;B &amp; Soul</span><span class="t"><i style="width:28%"></i></span><span class="v">28%</span></div>
+<div class="bar"><span class="l">Country &amp; Folk</span><span class="t"><i style="width:24%"></i></span><span class="v">24%</span></div>
+<div class="bar"><span class="l">Electronic &amp; Dance</span><span class="t"><i style="width:23%"></i></span><span class="v">23%</span></div>
+<div class="bar ref"><span class="l">All tracks</span><span class="t"><i style="width:28%"></i></span><span class="v">28%</span></div>
+</div>
+</div>
+<p><strong>A note of caution.</strong> Latin still leans on one star: Bad Bunny accounts for 55% of Latin hits, and without him the Latin hit rate falls from 54% to 38% (still above the 28% average). K-pop is broader: without BTS its hit rate rises to 63%. That is why the recommendation includes building a pipeline of artists, not just promoting the genre.</p>
+<h2 id="recommendations">Recommendations</h2>
+<p>The overarching recommendation is for Spotify to serve the tastes growing fastest on its platform with the same discovery muscle it applies to its biggest stars. It uses four levers Spotify already controls: <strong>recommendations, editorial playlists, artist programmes and partnerships.</strong></p>
+<div class="timeline">
+<div class="horizon"><div class="when"><small>Years 1–3 · 2026–28</small><b>Test and learn</b></div><div class="what"><h4>Serve rising tastes where listeners are most likely to love them</h4><p>A/B-test Latin and K-pop recommendations with listeners of adjacent tastes (pop, hip-hop, R&amp;B) and expand only where saves and replays rise. Deepen editorial playlists and home-screen shelves. Work with labels on release-day features.</p><span class="kpi-pill">KPI: Latin and K-pop share of new hits, 14% → 20%</span></div></div>
+<div class="horizon"><div class="when"><small>Years 3–5 · 2029–31</small><b>Grow the pipeline</b></div><div class="what"><h4>Turn more new artists into the next generation of stars</h4><p>Create dedicated Latin and K-pop cohorts in the RADAR emerging-artist programme, give artists audience data and marketing tools, and sponsor fan experiences around tours and releases.</p><span class="kpi-pill">KPI: emerging-artist hit rate, 1% → 5%; no artist above 30% of a genre's hits</span></div></div>
+<div class="horizon"><div class="when"><small>Years 5–10 · 2032–35</small><b>Repeat the playbook</b></div><div class="what"><h4>Make widening the spotlight a habit, not a one-off</h4><p>Review the genre opportunity matrix quarterly to find tastes with a high hit rate and a small presence, then apply the same test-and-grow approach. Keep the superstars central while the spotlight widens.</p><span class="kpi-pill">KPI: overall hit rate, 28% → 35%; non-superstar share of hits above 40%</span></div></div>
+</div>
+<p>The full deck adds an implementation plan (which Spotify team leads each initiative, with timeline and KPI), expected results, and a risk register covering listener fatigue, dependence on one star, cultural authenticity and measuring the wrong thing.</p>
+<div class="gallery">
+<figure class="zoomable"><img src="/projects/spotify-widening-the-spotlight/images/roadmap-1-recommendation.png" alt="Strategy deck slide: Our recommendation at a glance" loading="lazy"><figcaption>Strategy deck: recommendation at a glance.</figcaption></figure>
+<figure class="zoomable"><img src="/projects/spotify-widening-the-spotlight/images/roadmap-5-three-horizons.png" alt="Strategy deck slide: Roadmap of opportunities 2026 to 2035" loading="lazy"><figcaption>Strategy deck: three horizons, 2026–2035.</figcaption></figure>
+<figure class="zoomable"><img src="/projects/spotify-widening-the-spotlight/images/roadmap-3-where-tastes-widen.png" alt="Strategy deck slide: where tastes are widening" loading="lazy"><figcaption>Strategy deck: where tastes are widening.</figcaption></figure>
+<figure class="zoomable"><img src="/projects/spotify-widening-the-spotlight/images/roadmap-6-expected-results.png" alt="Strategy deck slide: expected results and KPI targets" loading="lazy"><figcaption>Strategy deck: expected results and KPI targets.</figcaption></figure>
+</div>
+<h2 id="under-the-hood">Under the hood</h2>
+<h3 id="data">Data</h3>
+<p>The dataset is a Spotify track extract supplied for the course: one row per track, with track, artist and album attributes (popularity, followers, genres, release date, duration, explicit flag). The extract held 8,778 rows; the cleaned file used for analysis has 8,582 rows, and the dashboard reports <strong>8,577 tracks from 2,545 artists on 5,200 albums, released between 1952 and 2025</strong>. Business and industry context in the strategy deck comes from public sources (Spotify results filings, IFPI, Music Business Worldwide and others), which are listed in the deck's appendix.</p>
+<h3 id="preparation-in-tableau-prep-builder">Preparation in Tableau Prep Builder</h3>
+<p>A four-step flow loads the cleaned CSV, drops rows with no artist, and creates six fields that drive every chart:</p>
+<figure class="zoomable"><img src="/projects/spotify-widening-the-spotlight/images/prep-flow.png" alt="The Tableau Prep flow: load CSV, drop bad rows, create fields, write to a Hyper extract" loading="lazy"><figcaption>The Tableau Prep flow behind the dashboard.</figcaption></figure>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Logic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Release Year</td>
+<td>Year taken from the album release date</td>
+</tr>
+<tr>
+<td>Content</td>
+<td>&quot;Explicit&quot; or &quot;Clean&quot;, from the explicit flag</td>
+</tr>
+<tr>
+<td>Genres</td>
+<td>Source genre list; blank values become &quot;Unknown&quot;</td>
+</tr>
+<tr>
+<td>Primary Genre</td>
+<td>The first genre listed for the artist</td>
+</tr>
+<tr>
+<td>Artist Tier</td>
+<td>Superstar (10M+ followers), Established (1M–10M), Developing (100K–1M), Emerging (under 100K)</td>
+</tr>
+<tr>
+<td>Genre Family</td>
+<td>400+ source genres grouped into 11 families by keyword rules (Latin, K-pop, Hip-Hop &amp; Rap, Pop, and so on)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="definitions-that-matter">Definitions that matter</h3>
+<ul>
+<li><strong>Hit:</strong> a track with a Spotify popularity score of 70 or more (out of 100). <strong>Hit rate</strong> is the share of tracks that are hits.</li>
+<li><strong>Share comparisons are made within each period</strong>, not as counts across periods, because popularity reflects recent plays and favours newer tracks.</li>
+<li><strong>Genre analysis covers tracks with a known genre.</strong> 39% of tracks have no genre in the source data.</li>
+</ul>
+<h3 id="independent-check-of-the-numbers">Independent check of the numbers</h3>
+<p>To make sure the dashboard figures were right, I rebuilt the same field logic in pandas and re-derived the headline results: 8% of artists and 58% of hits for superstars, 54% and 46% hit rates for Latin and K-pop, and 0.6% to 13.6% of new hits. They agree with the dashboard to the rounding used (the script keeps 8,579 rows against the dashboard's 8,577, a difference of two rows). The script is in the repository.</p>
+<pre><code class="language-python">def artist_tier(followers):
+    if followers &gt;= 10_000_000: return &quot;Superstar (10M+)&quot;
+    if followers &gt;= 1_000_000:  return &quot;Established (1M-10M)&quot;
+    if followers &gt;= 100_000:    return &quot;Developing (100K-1M)&quot;
+    return &quot;Emerging (&lt;100K)&quot;
+
+tier = df.groupby(&quot;Artist Tier&quot;).agg(tracks=(&quot;Hit&quot;, &quot;size&quot;), hits=(&quot;Hit&quot;, &quot;sum&quot;), hit_rate=(&quot;Hit&quot;, &quot;mean&quot;))
+tier[&quot;share_of_hits&quot;] = tier[&quot;hits&quot;] / tier[&quot;hits&quot;].sum()
+</code></pre>
+<h2 id="limitations">Limitations</h2>
+<ul>
+<li><strong>Popularity and hit rate measure listening, not revenue.</strong> The story shows where to invest; it does not prove profit. The roadmap proposes confirming results with Spotify's own data on saves, replays, retention and subscriptions.</li>
+<li><strong>The dataset is a sample of about 8,600 tracks</strong>, not the full catalogue, so shares describe this sample.</li>
+<li><strong>Popularity favours recent tracks</strong>, which is why comparisons are made within periods.</li>
+<li><strong>Targets in the roadmap are proposals for discussion</strong>, based on 2010–2025 trends in the dataset and Spotify's 2025 results.</li>
+<li><strong>AI use, for transparency:</strong> an AI assistant was used only to prepare and clean up the written strategy roadmap. The dashboard, the idea and the strategy are my own work.</li>
+</ul>
+<h2 id="files">Files and documentation</h2>
+<p>Everything below lives in the <a href="https://github.com/promevance/promevance.github.io/tree/main/projects/spotify-widening-the-spotlight" target="_blank" rel="noopener">project folder on GitHub</a>.</p>
+<div class="files">
+<a class="file" href="/projects/spotify-widening-the-spotlight/deck/Widening_the_Spotlight_Strategic_Roadmap.pdf"><span class="ext">PDF</span><span><b>Strategy deck: Widening the Spotlight</b><span class="d">26-page roadmap with evidence, implementation plan, risks and sources.</span></span><span class="go">Open ↗</span></a>
+<a class="file" href="/projects/spotify-widening-the-spotlight/deck/Spotify_Viz_Dashboard.pdf"><span class="ext">PDF</span><span><b>Dashboard export</b><span class="d">All five Tableau pages as a printable PDF.</span></span><span class="go">Open ↗</span></a>
+<a class="file" href="https://github.com/promevance/promevance.github.io/blob/main/projects/spotify-widening-the-spotlight/README.md" target="_blank" rel="noopener"><span class="ext">MD</span><span><b>Project README</b><span class="d">Overview, repository map and how to reproduce the figures.</span></span><span class="go">GitHub ↗</span></a>
+<a class="file" href="https://github.com/promevance/promevance.github.io/tree/main/projects/spotify-widening-the-spotlight/docs" target="_blank" rel="noopener"><span class="ext">MD</span><span><b>Documentation</b><span class="d">Methodology, data dictionary, insights and roadmap write-ups.</span></span><span class="go">GitHub ↗</span></a>
+<a class="file" href="/projects/spotify-widening-the-spotlight/data/spotify_data_clean.csv"><span class="ext">CSV</span><span><b>spotify_data_clean.csv</b><span class="d">Cleaned track data used in the analysis (8,582 rows, 15 columns).</span></span><span class="go">Download</span></a>
+<a class="file" href="/projects/spotify-widening-the-spotlight/data/track_data_final.csv"><span class="ext">CSV</span><span><b>track_data_final.csv</b><span class="d">Earlier extract with duration in milliseconds (8,778 rows).</span></span><span class="go">Download</span></a>
+<a class="file" href="/projects/spotify-widening-the-spotlight/tableau/Spotify_Viz.twb"><span class="ext">TWB</span><span><b>Spotify_Viz.twb</b><span class="d">Tableau workbook with the ten worksheets behind the story.</span></span><span class="go">Download</span></a>
+<a class="file" href="/projects/spotify-widening-the-spotlight/tableau/Spotify_Prep_Flow.tflx"><span class="ext">TFLX</span><span><b>Spotify_Prep_Flow.tflx</b><span class="d">Tableau Prep flow that creates the analysis fields.</span></span><span class="go">Download</span></a>
+<a class="file" href="https://github.com/promevance/promevance.github.io/blob/main/projects/spotify-widening-the-spotlight/reproduce_key_figures.py" target="_blank" rel="noopener"><span class="ext">PY</span><span><b>reproduce_key_figures.py</b><span class="d">pandas script that re-derives the headline numbers.</span></span><span class="go">GitHub ↗</span></a>
+</div>
+<h2 id="skills">Skills demonstrated</h2>
+<div class="chips">
+<span class="chip">Data storytelling</span><span class="chip">Tableau dashboard design</span><span class="chip">Tableau Prep</span><span class="chip">Calculated fields</span><span class="chip">Business strategy and roadmapping</span><span class="chip">KPI design</span><span class="chip">pandas validation</span><span class="chip">Documentation</span>
+</div>
+
+  </article>
+</div>
+
+<div class="container pager">
+<span></span><a class="next" href="/projects/mall-customer-segmentation/"><small>Next project →</small><b>Mall Customer Segmentation</b></a></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>
+        <img class="glyph" src="/assets/brand/glyph-ivory.svg" alt="" width="45" height="40">
+        <p><strong style="color:var(--ivory)">Evan Promise Chukwubueze</strong><br>Product | Data | Finance | Business</p>
+        <p>Analyst and project manager. Turning data into decisions people can act on.</p>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/projects/">Data Analytics projects</a></li>
+          <li><a href="/about/">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Projects</h2>
+        <ul>
+<li><a href="/projects/spotify-widening-the-spotlight/">Widening the Spotlight</a></li>
+<li><a href="/projects/mall-customer-segmentation/">Mall Customer Segmentation</a></li>
+<li><a href="/projects/uk-covid19-daily-cases/">UK COVID-19 Daily Cases</a></li>
+        </ul>
+        <h2 style="margin-top:22px">Connect</h2>
+        <ul>
+          <li><a href="https://github.com/promevance" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="mailto:promevance@gmail.com">promevance@gmail.com</a></li>
+        </ul>
+      </div>
+      <div class="legal">
+        <span>© 2026 Evan Promise Chukwubueze. Source on <a href="https://github.com/promevance/promevance.github.io" target="_blank" rel="noopener">GitHub</a>.</span>
+        <span>Spotify is a trademark of Spotify AB. The Spotify project is an independent academic case study and is not affiliated with or endorsed by Spotify.</span>
+      </div>
+    </div>
+  </footer>
+  <script src="/assets/site.js" defer></script>
+</body>
+</html>

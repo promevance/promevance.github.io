@@ -48,13 +48,19 @@ env = Environment(loader=FileSystemLoader(str(SRC / "templates")), autoescape=se
 SITE = {
     "name": "Evan Promise",
     "full_name": "Evan Promise Chukwubueze",
-    "tagline": "Product | Data | Finance | Business",
+    "tagline": "Brand & Growth · GTM Engineering · Data",
+    "role": "Brand and growth specialist, GTM engineer and budding data engineer",
     "url": "https://promevance.github.io",
+    "website": "https://evanpromise.com",
+    "website_label": "evanpromise.com",
+    "linkedin": "https://www.linkedin.com/in/evan-promise-c/",
     "github": "https://github.com/promevance",
     "repo": GH,
-    "email": "promevance@gmail.com",
-    "description": ("Data analytics portfolio of Evan Promise Chukwubueze: Tableau dashboards, Python analysis and "
-                    "business strategy case studies, each with a plain-language summary and a technical deep dive."),
+    "email": "hello@evanpromise.com",
+    "email_alt": "promevance@gmail.com",
+    "description": ("Data and technical portfolio of Evan Promise Chukwubueze, brand and growth specialist, GTM engineer "
+                    "and budding data engineer: Tableau dashboards, Python analysis and data-backed strategy, each with a "
+                    "plain-language summary and a technical deep dive."),
 }
 
 PROJECTS = []
